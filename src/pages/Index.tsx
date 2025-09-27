@@ -91,21 +91,6 @@ const Index = () => {
       ],
       popular: true,
       icon: <Star className="w-6 h-6" />
-    },
-    {
-      name: "Cloud",
-      description: "Solução completa enterprise",
-      price: "R$ 279,90",
-      period: "/mês",
-      features: [
-        "Acesso via plataforma",
-        "Usuários Ilimitados*",
-        "Múltiplos CRM's",
-        "Privacidade Total",
-        "Servidor 24h"
-      ],
-      popular: false,
-      icon: <Building2 className="w-6 h-6" />
     }
   ];
 
@@ -139,14 +124,14 @@ const Index = () => {
             Automatize conversas, aumente vendas e ofereça um atendimento excepcional com nossa plataforma avançada.
           </p>
           
-          <div className="space-x-4">
+          <div className="space-x-4 space-y-3">
             <Button 
               asChild 
               size="lg" 
               className="bg-white text-primary hover:bg-white/90 shadow-elegant text-lg px-8 py-6"
             >
               <Link to="/lead-capture">
-                Testar Agora Grátis
+                Testar agora grátis
               </Link>
             </Button>
             
@@ -264,8 +249,8 @@ const Index = () => {
               Planos flexíveis que crescem junto com sua empresa
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {plans.map((plan, index) => (
               <Card key={index} className={`border-0 backdrop-blur-sm hover:shadow-glow transition-all duration-300 relative ${
                 plan.popular 
@@ -323,6 +308,7 @@ const Index = () => {
               </Card>
             ))}
           </div>
+          </div>
           
           <div className="text-center mt-8">
             <p className="text-white/80 text-sm">
@@ -332,7 +318,6 @@ const Index = () => {
               *Cada usuário adicional possui custo adicional conforme necessidade
             </p>
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
