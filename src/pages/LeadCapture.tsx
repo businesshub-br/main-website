@@ -39,10 +39,10 @@ const LeadCapture = () => {
         product_id: "3633ba49-03a5-42ac-bcec-df0add5a77c8",
         id: "68c5a9438450c55985d3860d",
         slug: "chatcenter",
-        referral_url: "https://memb.ly/p/68c5a9438450c55985d3860d"
+        referral_url: "https://app.membly.com.br/p/68c5a9438450c55985d3860d"
       };
 
-      const response = await fetch("https://memb.ly/api/member/signup/", {
+      const response = await fetch("https://back.memb.ly/api/members/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -133,13 +133,13 @@ const LeadCapture = () => {
     WhatsApp
   </Label>
   <div className="relative">
-    <MessageCircle className="absolute left-3 top-3 h-4 w-4 text-muted-foreground z-10" />
     <PhoneInput
       country={"br"} // Brasil como padrão
       value={formData.whatsapp}
       onChange={(value) =>
         setFormData((prev) => ({ ...prev, whatsapp: value }))
       }
+      enableSearch={true}
       inputProps={{
         name: "whatsapp",
         required: true,
