@@ -6,6 +6,8 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, MessageCircle, Mail, User } from "lucide-react";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const LeadCapture = () => {
   const [formData, setFormData] = useState({
@@ -126,24 +128,27 @@ const LeadCapture = () => {
                 </div>
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="whatsapp" className="text-sm font-medium">
-                  WhatsApp
-                </Label>
-                <div className="relative">
-                  <MessageCircle className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                  <Input
-                    id="whatsapp"
-                    name="whatsapp"
-                    type="tel"
-                    placeholder="(11) 99999-9999"
-                    value={formData.whatsapp}
-                    onChange={handleInputChange}
-                    required
-                    className="pl-10"
-                  />
-                </div>
-              </div>
+             <div className="space-y-2">
+  <Label htmlFor="whatsapp" className="text-sm font-medium">
+    WhatsApp
+  </Label>
+  <div className="relative">
+    <MessageCircle className="absolute left-3 top-3 h-4 w-4 text-muted-foreground z-10" />
+    <PhoneInput
+      country={"br"} // Brasil como padrão
+      value={formData.whatsapp}
+      onChange={(value) =>
+        setFormData((prev) => ({ ...prev, whatsapp: value }))
+      }
+      inputProps={{
+        name: "whatsapp",
+        required: true,
+      }}
+      inputClass="pl-10 w-full !py-2 !rounded-md !border !border-input bg-background text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+      buttonClass="!bg-background !border-input"
+    />
+  </div>
+</div>
 
               <Button 
                 type="submit" 
