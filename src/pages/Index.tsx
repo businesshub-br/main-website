@@ -116,7 +116,7 @@ const Index = () => {
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Revolucione seu
             <span className="block bg-gradient-to-r from-white to-primary-glow bg-clip-text text-transparent">
-              WhatsApp Business
+              WhatsApp
             </span>
           </h1>
           
