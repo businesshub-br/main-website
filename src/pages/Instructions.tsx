@@ -101,7 +101,7 @@ const Instructions = () => {
                 Nossa equipe está pronta para te auxiliar durante todo o processo.
               </p>
               <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-              onClick={() => window.open("https://wa.me/5511931004232?text=Preciso de ajuda para a minha afiliação", "_blank")}>
+              onClick={() => window.open("https://wa.me/5511934003242?text=Preciso de ajuda para a minha afiliação", "_blank")}>
                 Entrar em contato
               </Button>
             </CardContent>

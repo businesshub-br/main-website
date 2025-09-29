@@ -136,13 +136,13 @@ const Index = () => {
               </Link>
             </Button>
             
-            <Button 
+            {/* <Button 
               variant="outline" 
               size="lg"
               className="border-white/30 text-primary bg-white/90 hover:bg-white backdrop-blur-sm text-lg px-8 py-6"
             >
               Saiba Mais
-            </Button>
+            </Button>*/}
           </div>
         </div>
       </section>
