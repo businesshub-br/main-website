@@ -97,16 +97,17 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-primary">
       {/* White Top Banner */}
-      <div className="bg-white py-4 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="mx-auto w-60 h-60 bg-gradient-accent rounded-3xl flex items-center justify-center shadow-glow">
+      <div className="bg-white py-0 px-4">
+        <div className="max-w-4xl mx-auto text-center rounded-3xl flex items-center justify-center">
+
+           
             <img 
               src={logoImage} 
               alt="Chat 4 Your Business Logo" 
-              className="w-48 h-48 object-contain"
+              className="w-48 h-48 object-contain flex items-center justify-center"
             />
-          </div>
-        </div>
+         </div>
+
       </div>
       
       {/* Hero Section */}
